@@ -11,7 +11,7 @@
             </button>
         </div>
         <div class="form">
-            <form method="POST" action="">
+            <form method="POST" action="" id="formCadastro">
                 <div class="form-header">
                     <div class="title">
                         <h1>Criar Conta</h1>
@@ -26,41 +26,44 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" class="input-alt" placeholder="Digite seu nome" required>
                         <span class="error-message" id="nome-error"></span>
-                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="input-box">
                         <label for="sobrenome">Sobrenome</label>
-                        <span class="error-message" id="sobrenome-error"></span>
                         <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
+                        <span class="error-message" id="sobrenome-error"></span>
                     </div>
 
                     <div class="input-box">
                         <label for="data_nascimento">Data de Nascimento</label>
-                        <span class="error-message" id="data_nascimento-error"></span>
                         <input type="date" name="data_nascimento" id="data_nascimento" required>
+                        <span class="error-message" id="data_nascimento-error"></span>
                     </div>
 
                     <div class="input-box">
                         <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required maxlength="14">
                         <span class="error-message" id="cpf-error"></span>
-                        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
                     </div>
 
                     <div class="input-box">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+                        <span class="error-message" id="email-error"></span>
                     </div>
 
                     <div class="input-box">
                         <label for="senha">Senha</label>
                         <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                        <span class="error-message" id="senha-error"></span>
                     </div>
 
                     <div class="input-box">
                         <label for="cep">CEP</label>
                         <input type="text" name="cep" id="cep" placeholder="00000-000" pattern="\d{5}-\d{3}" required>
+                        <span class="error-message" id="cep-error"></span>
                     </div>
 
                     <div class="input-box">

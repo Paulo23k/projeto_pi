@@ -20,14 +20,14 @@ body {
 .title h1{
     font-size: 2rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .form-header h1::after {
     content: '';
     display: block;
     width: 5rem;
-    height: 0.3rem;
+    height: 0.2rem;
     background-color: #6DD0FF;
     margin: 0 auto;
     position: absolute;
@@ -69,10 +69,72 @@ body {
     border-radius: 5px;
 }
 
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-box label {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.input-box input {
+    margin-bottom: 0.3rem; /* Pequeno espaço entre input e erro */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    height: 0; /* Mantém um espaço fixo para evitar empurrar */
+    visibility: hidden;
+    right: 0; /* Alinha à direita */
+    text-align: right;
+}
+
+.input-box input.error {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 1);
+}
+
+.input-box input.valid {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+
+/* Aparece o erro sem afetar o layout */
+.input-box input.error + .error-message {
+    visibility: visible;
+}
+
+
+.input-box input.error + .error-message {
+    visibility: visible; /* Mostra quando há erro */
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    min-width: 150px; /* Evita que o input fique muito pequeno */
 }
 
 .input-box {
@@ -101,9 +163,30 @@ body {
     color: #000000be;
 }
 
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 40px; /* Espaço para o botão */
+}
+
+.password-container button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
 .continue-button button {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.4rem;
     border: none;
     background-color: #6DD0FF;
     padding: 0.5rem;
@@ -216,7 +299,7 @@ body {
     color: #f9f9f9;
 }
 
-@media (max-width: 1283px) {
+/* @media (max-width: 1283px) {
     .container {
         width: 80%;
     }
@@ -225,4 +308,4 @@ body {
         width: 25rem;
     }
     
-}
+} */
