@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Carrossel */
+.container-carrossel {
+  width: 100%;
+  max-width: 1920px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0; /* Centraliza horizontalmente */
+}
+
+.carrossel img {
+  width: 65%; /* Tamanho da imagem principal */
+  object-fit: cover;
+  transition: transform 0.5s, opacity 0.5s; /* Animações suaves */
+  opacity: 1; /* Imagem atual visível */
+  border-radius: 15px;
+}
+
+.carrossel img:not(.active) {
+  transform: scale(0.85); /* Reduz tamanho das prévias */
+  opacity: 0.3;
+}
+
+/* Botões */
+.container-carrossel button {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  z-index: 10; /* Garante que os botões fiquem acima do carrossel */
+  transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.container-carrossel button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container-carrossel button.prev {
+  left: 10px;
+}
+
+.container-carrossel button.next {
+  right: 10px;
+}
+
+/* Navegação manual */
+.nav-m {
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Espaçamento acima dos botões */
+}
+
+.nav-m .m-btn {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.nav-m .m-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1400px) {
+  .carrossel img {
+    width: 80%; /* Aumenta o tamanho da imagem principal em telas menores */
+  }
+
+  .container-carrossel button {
+    padding: 8px; /* Reduz o tamanho dos botões */
+  }
+
+  .nav-m .m-btn {
+    width: 8px;
+    height: 8px; /* Reduz o tamanho dos botões de navegação manual */
+  }
+}
+
+@media (max-width: 768px) {
+  .carrossel img {
+    width: 90%; /* Aumenta ainda mais o tamanho da imagem principal */
+  }
+
+  .container-carrossel button {
+    padding: 6px; /* Reduz ainda mais o tamanho dos botões */
+  }
+
+  .nav-m .m-btn {
+    width: 6px;
+    height: 6px; /* Reduz ainda mais o tamanho dos botões de navegação manual */
+  }
+}
+
+@media (max-width: 480px) {
+  .carrossel img {
+    width: 100%; /* A imagem ocupa toda a largura em telas muito pequenas */
+  }
+
+  .container-carrossel button {
+    padding: 5px; /* Botões ainda menores */
+  }
+
+  .nav-m .m-btn {
+    width: 5px;
+    height: 5px; /* Botões de navegação manual ainda menores */
+  }
+}

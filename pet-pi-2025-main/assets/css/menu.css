@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Estilos do nav (menu principal) */
+nav {
+    background-color: #6DD0FF;
+    width: 100%; /* Garante que o menu ocupe toda a largura */
+}
+
+/* Estilos da lista do menu */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distribui os itens do menu */
+    width: 100%;
+}
+
+/* Estilos dos itens do menu */
+.menu li {
+    position: relative;
+}
+
+/* Estilos dos links do menu */
+.menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    font-family: "Inria Sans", serif;
+    font-weight: 500;
+    font-style: normal;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover nos links do menu */
+.menu a:hover {
+    background-color: #6dd0ff;
+    color: #ffffff;
+}
+
+/* Estilos dos ícones dentro do menu */
+.menu a i {
+    margin-left: 8px; /* Espaço entre o texto e o ícone */
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+/* Cores personalizadas para os ícones */
+.menu a .fa-dog {
+    color: #FF5733; /* Cor do ícone de cachorro */
+}
+
+.menu a .fa-cat {
+    color: #FF6347; /* Cor do ícone de gato */
+}
+
+.menu a .fa-crow {
+    color: #FFD700; /* Cor do ícone de pássaro */
+}
+
+.menu a .fa-fish {
+    color: #1E90FF; /* Cor do ícone de peixe */
+}
+
+.menu a .fa-paw {
+    color: #228B22; /* Cor do ícone de outros pets */
+}
+
+/* Estilos do submenu */
+.submenu {
+    position: absolute;
+    list-style-type: none;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    background-color: #6DD0FF;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    top: 100%; /* Desce o submenu 20% para baixo */
+    left: 0;
+}
+
+.menu li:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Exibe o submenu ao passar o mouse */
+.menu li:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos dos itens do submenu */
+.submenu li {
+    width: 100%;
+}
+
+/* Estilos dos links do submenu */
+.submenu a {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Efeito de hover nos links do submenu */
+.submenu a:hover {
+    background-color: #b8e5fa;
+    color: #6dd0ff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Efeito de hover no título do menu principal */
+.menu > li:hover > a {
+    color: #ffffff; /* Cor branca ao passar o mouse */
+}
+
+/* Efeito de hover nos itens do submenu */
+.submenu a:hover {
+    color: #000000; /* Cor preta ao passar o mouse */
+    background-color: #b8e5fa; /* Fundo azul claro ao passar o mouse */
+}

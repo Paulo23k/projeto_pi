@@ -1,0 +1,14 @@
+.app {
+    position: relative; /* Define o container como referência para posicionamento absoluto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100vw;
+    flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+
+.cupom {
+    width: 60%;
+}

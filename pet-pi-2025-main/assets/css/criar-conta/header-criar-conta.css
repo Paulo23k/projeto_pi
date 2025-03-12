@@ -1,0 +1,88 @@
+header {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000; 
+}
+
+body {
+  padding-top: 20px; 
+}
+a.logo-link {
+  text-decoration: none;
+}
+
+  .logo-area {
+    text-decoration: none;
+  }
+
+  .container-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .logo-area img {
+    width: 40px;
+    height: auto;
+  }
+  
+  .logo-area h1 {
+    margin: 0;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  
+  .cart, .login {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .cart-icon, .perfil {
+    width: 25px;
+    height: 25px;
+    gap: 8px;
+  }
+  
+  .botao, .botao-secundario {
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  .botao {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid white;
+  }
+  
+  .botao:hover {
+    background-color: white;
+    color: #000000;
+  }
+  
+  .botao-secundario {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid white;
+    margin-right: 20px;
+  }
+  
+  .botao-secundario:hover {
+    background-color: white;
+    color: #000000;
+  }

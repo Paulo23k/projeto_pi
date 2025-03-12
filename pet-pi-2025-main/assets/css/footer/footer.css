@@ -1,0 +1,16 @@
+.footer-container {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer-image {
+  width: 100%; /* A imagem será redimensionada para caber no contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
