@@ -1,3 +1,4 @@
+
 document.getElementById('cep').addEventListener('blur', function () {
     const cep = this.value.replace(/\D/g, ''); // Remove qualquer coisa que não seja número
     if (cep.length === 8) {
@@ -322,86 +323,86 @@ function validarCEP() {
 document.getElementById("formCadastro").addEventListener("submit", function (event) {
     event.preventDefault(); // Impede o envio do formulário para validação
 
-    let camposValidos = true;
-    let inputs = document.querySelectorAll("input[required]");
+    // let camposValidos = 0;
+    // let inputs = document.querySelectorAll("input[required]");
 
-    // Valida cada campo individualmente
-    inputs.forEach(input => {
-        let errorMessage = input.nextElementSibling; // A mensagem de erro logo após o input
+    // // Valida cada campo individualmente
+    // inputs.forEach(input => {
+    //     let errorMessage = input.nextElementSibling; // A mensagem de erro logo após o input
 
-        // Verificação do campo Nome
-        if (input.id === "nome" && input.value.trim() === "") {
-            camposValidos = false;
-            errorMessage.textContent = "Nome é obrigatório.";
-            input.classList.add("error");
-        } else if (input.id === "sobrenome" && input.value.trim() === "") {
-            camposValidos = false;
-            errorMessage.textContent = "Sobrenome é obrigatório.";
-            input.classList.add("error");
-        } else if (input.id === "data_nascimento" && input.value === "") {
-            camposValidos = false;
-            errorMessage.textContent = "Data de nascimento é obrigatória.";
-            input.classList.add("error");
-        } 
+    //     // Verificação do campo Nome
+    //     if (input.id === "nome" && input.value.trim() === "") {
+    //         camposValidos = 1;
+    //         errorMessage.textContent = "Nome é obrigatório.";
+    //         input.classList.add("error");
+    //     } else if (input.id === "sobrenome" && input.value.trim() === "") {
+    //         camposValidos = 1;
+    //         errorMessage.textContent = "Sobrenome é obrigatório.";
+    //         input.classList.add("error");
+    //     } else if (input.id === "data_nascimento" && input.value === "") {
+    //         camposValidos = 1;
+    //         errorMessage.textContent = "Data de nascimento é obrigatória.";
+    //         input.classList.add("error");
+    //     } 
 
-        // Verificação de CPF
-        else if (input.id === "cpf") {
-            const cpfPattern = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-            if (!cpfPattern.test(input.value)) {
-                camposValidos = false;
-                errorMessage.textContent = "CPF inválido. O formato correto é 000.000.000-00.";
-                input.classList.add("error");
-            } else {
-                input.classList.add("valid");
-                input.classList.remove("error");
-                errorMessage.textContent = "";
-            }
-        }
+    //     // Verificação de CPF
+    //     else if (input.id === "cpf") {
+    //         const cpfPattern = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+    //         if (!cpfPattern.test(input.value)) {
+    //             camposValidos = 1;
+    //             errorMessage.textContent = "CPF inválido. O formato correto é 000.000.000-00.";
+    //             input.classList.add("error");
+    //         } else {
+    //             input.classList.add("valid");
+    //             input.classList.remove("error");
+    //             errorMessage.textContent = "";
+    //         }
+    //     }
 
-        // Verificação de Email
-        else if (input.id === "email") {
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(input.value)) {
-                camposValidos = false;
-                errorMessage.textContent = "Email inválido.";
-                input.classList.add("error");
-            } else {
-                input.classList.add("valid");
-                input.classList.remove("error");
-                errorMessage.textContent = "";
-            }
-        }
+    //     // Verificação de Email
+    //     else if (input.id === "email") {
+    //         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    //         if (!emailPattern.test(input.value)) {
+    //             camposValidos = 1;
+    //             errorMessage.textContent = "Email inválido.";
+    //             input.classList.add("error");
+    //         } else {
+    //             input.classList.add("valid");
+    //             input.classList.remove("error");
+    //             errorMessage.textContent = "";
+    //         }
+    //     }
 
-        // Verificação de Senha
-        else if (input.id === "senha") {
-            if (input.value.length < 12) {
-                camposValidos = false;
-                errorMessage.textContent = "A senha deve ter pelo menos 12 caracteres.";
-                input.classList.add("error");
-            } else {
-                input.classList.add("valid");
-                input.classList.remove("error");
-                errorMessage.textContent = "";
-            }
-        }
+    //     // Verificação de Senha
+    //     else if (input.id === "senha") {
+    //         if (input.value.length < 12) {
+    //             camposValidos = 1;
+    //             errorMessage.textContent = "A senha deve ter pelo menos 12 caracteres.";
+    //             input.classList.add("error");
+    //         } else {
+    //             input.classList.add("valid");
+    //             input.classList.remove("error");
+    //             errorMessage.textContent = "";
+    //         }
+    //     }
 
-        // Verificação de CEP
-        else if (input.id === "cep") {
-            const cepPattern = /^\d{5}-\d{3}$/;
-            if (!cepPattern.test(input.value)) {
-                camposValidos = false;
-                errorMessage.textContent = "CEP inválido. O formato correto é 00000-000.";
-                input.classList.add("error");
-            } else {
-                input.classList.add("valid");
-                input.classList.remove("error");
-                errorMessage.textContent = "";
-            }
-        }
-    });
+    //     // Verificação de CEP
+    //     else if (input.id === "cep") {
+    //         const cepPattern = /^\d{5}-\d{3}$/;
+    //         if (!cepPattern.test(input.value)) {
+    //             camposValidos = 1;
+    //             errorMessage.textContent = "CEP inválido. O formato correto é 00000-000.";
+    //             input.classList.add("error");
+    //         } else {
+    //             input.classList.add("valid");
+    //             input.classList.remove("error");
+    //             errorMessage.textContent = "";
+    //         }
+    //     }
+    // });
 
     // Se todos os campos forem válidos, o formulário é enviado
-    if (camposValidos) {
+    if (document.querySelectorAll(".error").length == 0) {
         alert("Cadastro realizado com sucesso! Redirecionando para o cadastro de Pet...");
         window.location.href = "confirmar-pet.php";
     } else {

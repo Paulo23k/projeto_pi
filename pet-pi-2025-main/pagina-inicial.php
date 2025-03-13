@@ -43,12 +43,12 @@ include 'includes/header.php';
     <div class="carrossel-itens">
       <!-- Primeira div com 6 imagens -->
       <div class="grupo-imagens">
-        <div class="item-carrossel"><img src="assets/img/Swiper/Raçao.png" alt="Produto 1"></div>
-        <div class="item-carrossel"><img src="assets/img/Swiper/Petiscos.png" alt="Produto 2"></div>
-        <div class="item-carrossel"><img src="assets/img/Swiper/Medicamentos.png" alt="Produto 2"></div>
-        <div class="item-carrossel"><img src="assets/img/Swiper/Higiene.png" alt="Produto 4"></div>
-        <div class="item-carrossel"><img src="assets/img/Swiper/Higiene-1.png" alt="Produto 5"></div>
-        <div class="item-carrossel"><img src="assets/img/Swiper/Acessorios.png" alt="Produto 6"></div>
+        <div class="item-carrossel"><img src="assets/img/Swiper/cães/Raçao.png" alt="Produto 1"></div>
+        <div class="item-carrossel"><img src="assets/img/Swiper/cães/Petiscos.png" alt="Produto 2"></div>
+        <div class="item-carrossel"><img src="assets/img/Swiper/cães/Medicamentos.png" alt="Produto 3"></div>
+        <div class="item-carrossel"><img src="assets/img/Swiper/cães/Higiene.png" alt="Produto 4"></div>
+        <div class="item-carrossel"><img src="assets/img/Swiper/cães/Cosmeticos.png" alt="Produto 5"></div>
+        <div class="item-carrossel"><img src="assets/img/Swiper/cães/Acessorios.png" alt="Produto 6"></div>
       </div>
 
       <!-- Segunda div com 6 imagens -->
@@ -76,12 +76,12 @@ include 'includes/header.php';
     <div class="carrossel-itens2">
       <!-- Primeira div com 6 imagens -->
       <div class="grupo-imagens2">
-        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Raçao_2.png" alt="Produto 1"></div>
-        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Petiscos_2.png" alt="Produto 2"></div>
-        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Medicamentos_2.png" alt="Produto 2"></div>
-        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Higiene_2.png" alt="Produto 4"></div>
+        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Raçao.png" alt="Produto 1"></div>
+        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Petiscos.png" alt="Produto 2"></div>
+        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Medicamentos.png" alt="Produto 2"></div>
+        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Higiene.png" alt="Produto 4"></div>
         <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Brinquedos.png" alt="Produto 5"></div>
-        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Acessorios_2.png" alt="Produto 6"></div>
+        <div class="item-carrossel2"><img src="assets/img/Swiper/Gatos/Acessorios.png" alt="Produto 6"></div>
       </div>
 
       <!-- Segunda div com 6 imagens -->
