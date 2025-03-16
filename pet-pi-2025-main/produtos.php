@@ -20,7 +20,7 @@ include 'includes/header.php';
     <?php
       for ($i = 1; $i <= 12; $i++) {
         ?>
-        <div class="item-carrossel"><img src="assets/img/Swiper/cães/<?php echo $foto . '.png'; ?>" alt="Produto <?php echo $i; ?>"></div>
+        <div class="item-carrossel"><img src="assets/img/Swiper/<?php echo $foto . '.png'; ?>" alt="Produto <?php echo $i; ?>"></div>
         <?php
       }
     ?>

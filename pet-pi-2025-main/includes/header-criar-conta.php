@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="assets/css/criar-conta/estilo-criar-conta.css">
   <link rel="stylesheet" href="assets/css/criar-conta/header-criar-conta.css">
   <link rel="stylesheet" href="assets/css/footer/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
 <header>
     <div class="container-header">
       <a href="pagina-inicial.php" class="logo-link" >

@@ -19,8 +19,8 @@ body {
 
 .title h1{
     font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 .form-header h1::after {
@@ -35,8 +35,8 @@ body {
 }
 
 .container {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
@@ -247,15 +247,15 @@ input {
 /* Botão de voltar na parte superior esquerda */
 .button-back {
     position: absolute;
-    left: 20px;
+    left: 40px;
 }
 
 .button-back button {
     background-color: #6DD0FF;
     color: rgb(0, 0, 0);
     border: none;
-    padding: 8px 8px;
-    font-size: 12px;
+    padding: 6px 6px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -299,13 +299,81 @@ input {
     color: #f9f9f9;
 }
 
-/* @media (max-width: 1283px) {
+@media (max-width: 1330px) {
     .container {
-        width: 80%;
+        flex-direction: column; /* Empilha os elementos */
+        width: 90%;
+        height: 100%; /* Ajusta a altura conforme necessário */
+        box-shadow: none;
+        padding: 2rem;
     }
 
-    .form-image img {
-        width: 25rem;
+    .form-image {
+        display: none; /* Remove a imagem */
     }
-    
-} */
+
+    .form {
+        width: 100%;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        height: 100vh; /* Ocupa toda a tela */
+    }
+
+    .form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column; /* Inputs ocupam a largura toda */
+        gap: 10px;
+    }
+
+    .input-box {
+        width: 100%; /* Inputs ocupam a largura total */
+    }
+
+    .title h1 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    .continue-button button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .jatemconta{
+        visibility: hidden;
+    }
+
+    .button-back {
+        position: absolute;
+        left: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-header .title {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .button-back {
+        position: relative;
+        left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .login-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .container {
+        height: 100%; /* Ocupa toda a tela */
+    }
+}

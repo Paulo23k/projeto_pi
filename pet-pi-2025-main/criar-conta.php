@@ -7,7 +7,7 @@
         </div>
         <div class="button-back">
             <button onclick="window.history.back()" aria-label="Voltar">
-                &#8592; Anterior
+            <i class="fas fa-arrow-left"></i>
             </button>
         </div>
         <div class="form">
@@ -16,7 +16,7 @@
                     <div class="title">
                         <h1>Criar Conta</h1>
                         <div class="login-section">
-                            <span>Já tem uma conta?</span>
+                            <span class="jatemconta">Já tem uma conta?</span>
                             <a href="login.php" class="login-button">Login</a>
                     </div>
                     </div>
