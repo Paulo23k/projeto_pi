@@ -5,20 +5,20 @@
         <div class="form-image">
             <img src="assets/img/CriarConta/CadastroUser.png" alt="Imagem de Cadastro">
         </div>
-        <div class="button-back">
+        <!-- <div class="button-back">
             <button onclick="window.history.back()" aria-label="Voltar">
-            <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-left"></i>
             </button>
-        </div>
+        </div> -->
         <div class="form">
-            <form method="POST" action="" id="formCadastro">
+        <form method="POST" action="processaCadastro.php" id="formCadastro">
                 <div class="form-header">
                     <div class="title">
                         <h1>Criar Conta</h1>
                         <div class="login-section">
                             <span class="jatemconta">Já tem uma conta?</span>
                             <a href="login.php" class="login-button">Login</a>
-                    </div>
+                        </div>
                     </div>
                 </div>
 
