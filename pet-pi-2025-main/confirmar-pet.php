@@ -9,8 +9,8 @@
   <div class="pagina-confirmar-pet">
     <h1 class="titulo">PetLand</h1>
     <p>Deseja cadastrar seu Pet?</p>
-    <button class="botao" onclick="irParaPagina('registrar-pet.html')">Sim</button>
-    <button class="botao-secundario" onclick="irParaPagina('pagina-inicial.html')">Não</button>
+    <button class="botao" onclick="irParaPagina('registrar-pet.php')">Sim</button>
+    <button class="botao-secundario" onclick="irParaPagina('pagina-inicial.php')">Não</button>
   </div>
   <script src="script.js"></script>
 </body>

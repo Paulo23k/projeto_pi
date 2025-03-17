@@ -11,7 +11,7 @@
             </button>
         </div> -->
         <div class="form">
-        <form method="POST" action="processaCadastro.php" id="formCadastro">
+        <form method="POST" action="processa_cadastro.php" id="formCadastro">
                 <div class="form-header">
                     <div class="title">
                         <h1>Criar Conta</h1>
@@ -21,8 +21,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Campos do Formulário -->
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nome">Nome</label>
@@ -79,7 +77,6 @@
                 <div class="continue-button">
                     <button type="submit" id="btnlogin">Criar Conta</button>
                 </div>
-                <!-- Login Social -->
                 <div class="login-social">
                     <p>Ou faça login com:</p>
                     <a class="hover-icon" href="#" aria-label="Login com Google">

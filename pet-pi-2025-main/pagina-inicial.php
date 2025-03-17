@@ -35,7 +35,6 @@ include 'includes/header.php';
     <area target="_blank" alt="Apple Store" title="Apple Store" href="https://www.apple.com/br/app-store/" coords="257,111,356,147" shape="rect">
     </map>
 </div>
-    <!-- Outros conteúdos -->
   </section>
   <section>
   <h1 class="h1-destaque-dog">Destaques para Cachorros</h1>

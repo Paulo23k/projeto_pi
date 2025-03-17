@@ -19,6 +19,7 @@
 <body>
   <header>
     <div class="container-header">
+    <a href="pagina-inicial.php" class="logo-link" >
       <div class="logo-area">
         <img src="assets/img/Logo.png" alt="Logo da PetLand">
         <h1>PetLand</h1>
