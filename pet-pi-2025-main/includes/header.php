@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $pageTitle ?? 'PetLand'; ?></title>
+  <link rel="icon" href="assets/img/Favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/estilo-inicial.css">
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/menu.css">
@@ -13,26 +14,29 @@
   <link rel="stylesheet" href="assets/css/Carrosseis/carrossel-destaque.css">
   <link rel="stylesheet" href="assets/css/footer/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
   <header>
-    <div class="container-header">
-    <a href="pagina-inicial.php" class="logo-link" >
-      <div class="logo-area">
-        <img src="assets/img/Logo.png" alt="Logo da PetLand">
-        <h1>PetLand</h1>
-        <div class="wrap">
-          <div class="search">
-            <input type="text" class="searchTerm" placeholder="Pesquise">
-            <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-        </div>
+  <div class="container-header">
+  <div class="logo-area">
+    <a href="pagina-inicial.php" class="logo-link">
+      <img src="assets/img/Logo.png" alt="Logo da PetLand">
+    </a>
+    <a href="pagina-inicial.php" class="logo-link" style="text-decoration: none;">
+    <h1>PetLand</h1>
+    </a>
+    <div class="wrap">
+      <div class="search">
+        <input type="text" class="searchTerm" placeholder="Pesquise">
+        <button type="submit" class="searchButton">
+          <i class="fa fa-search"></i>
+        </button>
       </div>
     </div>
+  </div>
+</div>
     <div class="cart">
       <a href="carrinho.php" class="carrinho-link">
         <img class="cart-icon" src="assets\img\Header\cart4.svg" alt="Ícone de Perfil">
@@ -46,7 +50,7 @@
   <nav>
   <ul class="menu">
     <li>
-      <a href="#">Cachorro <i class="fas fa-dog"></i></a>
+      <a href="#">Cachorro <i class="fas fa-dog"></i></a> 
       <ul class="submenu">
         <li><a href="produtos.php?titulo=Ração para Cães&foto=ProdutoIndisponivel">Ração</a></li>
         <li><a href="produtos.php?titulo=Petiscos para Cães&foto=ProdutoIndisponivel">Petiscos</a></li>
@@ -57,7 +61,7 @@
       </ul>
     </li>
     <li>
-      <a href="#">Gato <i class="fas fa-cat"></i></a>
+      <a href="#">Gato <i class="fa-solid fa-cat"></i></a> 
       <ul class="submenu">
         <li><a href="produtos.php?titulo=Ração para Gatos&foto=ProdutoIndisponivel">Ração</a></li>
         <li><a href="produtos.php?titulo=Petiscos para Gatos&foto=ProdutoIndisponivel">Petiscos</a></li>
@@ -68,7 +72,7 @@
       </ul>
     </li>
     <li>
-      <a href="#">Pássaro <i class="fas fa-crow"></i></a>
+      <a href="#">Pássaro <i class="fas fa-dove"></i></a> 
       <ul class="submenu">
         <li><a href="produtos.php?titulo=Alimentação para Pássaros&foto=ProdutoIndisponivel">Alimentação</a></li>
         <li><a href="produtos.php?titulo=Medicamentos para Pássaros&foto=ProdutoIndisponivel">Medicamentos</a></li>
@@ -78,7 +82,7 @@
       </ul>
     </li>
     <li>
-      <a href="#">Peixe <i class="fas fa-fish"></i></a>
+      <a href="#">Peixe <i class="fa-solid fa-fish"></i></a>
       <ul class="submenu">
         <li><a href="produtos.php?titulo=Alimentação para Peixes&foto=ProdutoIndisponivel">Alimentação</a></li>
         <li><a href="produtos.php?titulo=Medicamentos para Peixes&foto=ProdutoIndisponivel">Medicamentos</a></li>
@@ -88,7 +92,7 @@
       </ul>
     </li>
     <li>
-      <a href="#">Roedores <i class="fas fa-paw"></i></a>
+      <a href="#">Roedores <i class="fas fa-cheese"></i></a>
       <ul class="submenu">
         <li><a href="produtos.php?titulo=Ração para Roedores&foto=ProdutoIndisponivel">Ração</a></li>
         <li><a href="produtos.php?titulo=Petiscos para Roedores&foto=ProdutoIndisponivel">Petiscos</a></li>

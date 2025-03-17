@@ -121,7 +121,7 @@ function validarDataNascimento() {
     }
 }
 
-// 📌 Validação do CPF
+// Validação do CPF
 document.getElementById("cpf").addEventListener("input", function () {
     formatarCPF(this);
     validarCPF();
@@ -131,12 +131,11 @@ document.getElementById("cpf").addEventListener("blur", function () {
     validarCPF();
 });
 
-// 📌 Formatar CPF automaticamente (000.000.000-00)
 function formatarCPF(input) {
-    let cpf = input.value.replace(/\D/g, ''); // Remove tudo que não for número
+    let cpf = input.value.replace(/\D/g, ''); 
 
     if (cpf.length > 11) {
-        cpf = cpf.substring(0, 11); // Limita a 11 dígitos
+        cpf = cpf.substring(0, 11); 
     }
 
     if (cpf.length <= 3) {
@@ -150,7 +149,6 @@ function formatarCPF(input) {
     }
 }
 
-// 📌 Validar CPF corretamente
 function validarCPF() {
     let cpfInput = document.getElementById("cpf");
     let cpf = cpfInput.value.replace(/\D/g, ''); // Remove pontos e hífen
@@ -176,7 +174,6 @@ function validarCPF() {
     }
 }
 
-// 📌 Algoritmo de validação do CPF
 function validarCPFNumerico(cpf) {
     if (/^(\d)\1{10}$/.test(cpf)) return false; // Impede CPFs com números repetidos
 
@@ -200,7 +197,7 @@ function validarCPFNumerico(cpf) {
     return true;
 }
 
-// 📌 Validação do Email
+// Validação do Email
 document.getElementById("email").addEventListener("blur", function () {
     validarEmail();
 });
@@ -215,13 +212,11 @@ function validarEmail() {
     let emailError = document.getElementById("email-error");
     let email = emailInput.value.trim();
 
-    // Verificação do campo obrigatório
     if (email === "") {
         emailError.textContent = "O campo de email é obrigatório.";
         emailInput.classList.add("error");
         emailInput.classList.remove("valid");
     }
-    // Verificação da validade do email
     else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
         emailError.textContent = "Email inválido.";
         emailInput.classList.add("error");
@@ -242,25 +237,21 @@ document.getElementById("senha").addEventListener("input", function () {
     validarSenha();
 });
 
-// Função de validação da senha
 function validarSenha() {
     let senhaInput = document.getElementById("senha");
     let senhaError = document.getElementById("senha-error");
     let senha = senhaInput.value.trim();
 
-    // Verificação do campo obrigatório
     if (senha === "") {
         senhaError.textContent = "O campo de senha é obrigatório.";
         senhaInput.classList.add("error");
         senhaInput.classList.remove("valid");
     }
-    // Verificação do comprimento mínimo da senha (12 caracteres)
     else if (senha.length < 12) {
         senhaError.textContent = "A senha deve ter pelo menos 12 caracteres.";
         senhaInput.classList.add("error");
         senhaInput.classList.remove("valid");
     }
-    // Verificação de pelo menos 1 caractere especial (exemplo: !, @, #, $, etc)
     else if (!/[!@#$%^&*(),.?":{}|<>]/.test(senha)) {
         senhaError.textContent = "A senha deve conter pelo menos 1 caractere especial.";
         senhaInput.classList.add("error");
@@ -281,7 +272,6 @@ document.getElementById("cep").addEventListener("blur", function () {
     validarCEP();
 });
 
-// 📌 Formatar CEP automaticamente (00000-000)
 function formatarCEP(input) {
     let cep = input.value.replace(/\D/g, ''); // Remove tudo que não for número
 
@@ -296,7 +286,6 @@ function formatarCEP(input) {
     }
 }
 
-// 📌 Validar CEP corretamente no evento blur
 function validarCEP() {
     let cepInput = document.getElementById("cep");
     let cep = cepInput.value.replace(/\D/g, ''); // Remove traços e espaços
@@ -323,10 +312,25 @@ function validarCEP() {
 document.getElementById("formCadastro").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Se todos os campos forem válidos, o formulário é enviado
     if (document.querySelectorAll(".error").length == 0) {
-        alert("Cadastro realizado com sucesso! Redirecionando para o cadastro de Pet...");
-        window.location.href = "confirmar-pet.php";
+        // Criando um objeto FormData para enviar os dados do formulário via AJAX
+        var formData = new FormData(this);
+
+        // Usando AJAX para enviar os dados
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "processa_cadastro.php", true);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                // Se o cadastro for bem-sucedido, redireciona o usuário
+                alert("Cadastro realizado com sucesso! Redirecionando para o cadastro de Pet...");
+                window.location.href = "confirmar-pet.php";
+            } else {
+                alert("Ocorreu um erro ao tentar cadastrar. Tente novamente.");
+            }
+        };
+
+        xhr.send(formData); 
     } else {
         alert("Por favor, preencha todos os campos corretamente.");
     }

@@ -47,27 +47,33 @@ nav {
     font-size: 20px; /* Tamanho do ícone */
 }
 
-/* Cores personalizadas para os ícones */
-.menu a .fa-dog {
-    color: #FF5733; /* Cor do ícone de cachorro */
+/* .menu a .fa-dog {
+    color: #FF5733;
+} */
+
+/* Efeito hover (opcional) */
+.menu a:hover .fa-dog {
+    color: #FF8C00; 
 }
 
-.menu a .fa-cat {
-    color: #FF6347; /* Cor do ícone de gato */
+.menu a:hover .fa-cat {
+    color: #3385ff;
 }
 
-.menu a .fa-crow {
-    color: #FFD700; /* Cor do ícone de pássaro */
+.menu a:hover .fa-dove {
+    color: #146e2d;
 }
 
-.menu a .fa-fish {
-    color: #1E90FF; /* Cor do ícone de peixe */
+.menu a:hover .fa-fish {
+    color: #39b9f5;
 }
 
-.menu a .fa-paw {
-    color: #228B22; /* Cor do ícone de outros pets */
+.menu a:hover .fa-cheese {
+    color: #ffc916;
 }
-
+.menu a:hover .fa-paw {
+    color: #ff33f5;
+}
 /* Estilos do submenu */
 .submenu {
     position: absolute;
@@ -80,7 +86,7 @@ nav {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    top: 100%; /* Desce o submenu 20% para baixo */
+    top: 100%;
     left: 0;
 }
 
@@ -91,7 +97,6 @@ nav {
 }
 
 
-/* Exibe o submenu ao passar o mouse */
 .menu li:hover .submenu {
     display: block;
     opacity: 1;

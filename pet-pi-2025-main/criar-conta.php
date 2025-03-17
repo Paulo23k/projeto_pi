@@ -95,6 +95,6 @@
             </form>
         </div>
     </div>
-</body>
 
-<script src="assets/js/criar-conta/cadastro.js"></script>
+    <script src="assets/js/criar-conta/cadastro.js"></script>
+</body>

@@ -330,30 +330,36 @@ input {
 
 @media (max-width: 600px) {
     .input-group {
-        flex-direction: column; /* Inputs ocupam a largura toda */
+        flex-direction: column;
         gap: 10px;
     }
 
     .input-box {
-        width: 100vh; /* Inputs ocupam a largura total */
-    }
-
-    .title h1 {
-        font-size: 1.5rem; /* Reduz o tamanho do título */
+        width: 100%;
     }
 
     .continue-button button {
-        font-size: 1rem;
         padding: 0.8rem;
     }
 
-    .jatemconta{
+    .login-social a img {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .jatemconta {
         visibility: hidden;
+        font-size: 12px;
     }
 
     .button-back {
-        position: absolute;
-        left: 20px;
+        position: relative;
+        margin-bottom: 1rem;
     }
 }
 
@@ -363,17 +369,16 @@ input {
         text-align: center;
     }
 
+    .container {
+        height: 100%;
+    }
+
     .button-back {
-        position: relative;
-        left: 0;
         margin-bottom: 1rem;
     }
 
     .login-section {
         flex-direction: column;
         gap: 5px;
-    }
-    .container {
-        height: 100%; /* Ocupa toda a tela */
     }
 }
