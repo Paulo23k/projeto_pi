@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "bd_petland";
+$dbname = "petland_bd";
 
 $connection = new mysqli($servername, $username, $password, $dbname);
 
