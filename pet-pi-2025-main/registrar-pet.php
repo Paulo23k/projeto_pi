@@ -1,18 +1,14 @@
-<?php include 'includes/header-criar-conta.php'; ?>
+<?php include 'includes/header-registrar-pet.php'; ?>
 
 <body>
     <div class="container">
-        <div class="form-container">
-            <!-- Imagem do lado direito -->
-            <div class="form-image">
-                <img src="assets/img/CriarConta/CadastroUser.png" alt="Imagem de Cadastro do Pet">
-            </div>
-
-            <!-- Formulário -->
-            <div class="form">
-                <form method="POST" action="processa_cadastro_pet.php" enctype="multipart/form-data">
+        <div class="form-image">
+            <img src="assets/img/CriarConta/CadastroUser.png" alt="Imagem de Cadastro">
+        </div>
+        <div class="form">
+        <form method="POST" action="processa_cadastro_pet.php" enctype="multipart/form-data">
                     <div class="form-header">
-                        <h1>Cadastrar Pet</h1>
+                        <h1>Cadastrar Pet</h1><br><br>
                     </div>
 
                     <div class="input-group">
@@ -41,8 +37,8 @@
                         </div>
 
                         <div class="input-box">
-                            <label for="data_nascimento">Data de Nascimento</label>
-                            <input type="date" name="data_nascimento" id="data_nascimento" required>
+                            <label for="peso">Idade (Meses)</label>
+                            <input type="number" step="0" name="idade" id="idade" placeholder="Idade do pet" required>
                         </div>
 
                         <div class="input-box">
@@ -55,7 +51,6 @@
                         </div>
                     </div>
                 </form>
-            </div>
         </div>
     </div>
 </body>

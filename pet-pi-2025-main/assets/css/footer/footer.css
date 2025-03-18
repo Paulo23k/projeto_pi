@@ -1,16 +1,60 @@
-.footer-container {
+footer {
+  background-color: #F5F5F5;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.payment-social-container {
+  display: flex;
+  justify-content: space-between;  /* Garante que os dois blocos fiquem na extremidade esquerda e direita */
   width: 100%;
-  max-width: 100%;
-  text-align: center;
+  padding: 0 2rem; /* Adiciona algum espaçamento lateral se necessário */
+}
+
+.payment-methods, .social-media {
+  width: 48%;  
+}
+
+.payment-methods h3, .social-media h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.payment-icons img, .social-icons img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.payment-icons img {
+  width: 30px;  
+  height: 30px;
+}
+
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); 
 }
 
 .map-container {
-  position: relative;
   width: 100%;
-  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
-.footer-image {
-  width: 100%; /* A imagem será redimensionada para caber no contêiner */
-  height: auto; /* Mantém a proporção da imagem */
+.map-container img {
+  width: 100%; 
+  height: auto;
+  margin: 0;  
 }
