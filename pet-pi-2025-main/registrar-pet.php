@@ -6,7 +6,7 @@
             <img src="assets/img/CriarConta/CadastroUser.png" alt="Imagem de Cadastro">
         </div>
         <div class="form">
-        <form method="POST" action="processa_cadastro_pet.php" enctype="multipart/form-data">
+        <form method="POST" action="processa-registro-pet.php" enctype="multipart/form-data">
                     <div class="form-header">
                         <h1>Cadastrar Pet</h1><br><br>
                     </div>
@@ -19,7 +19,14 @@
 
                         <div class="input-box">
                             <label for="tipo">Tipo de Animal</label>
-                            <input type="text" name="tipo" id="tipo" placeholder="Tipo de animal" required>
+                            <select name="tipo" id="tipo" required>
+                                <option value="">Selecione o tipo de animal</option>
+                                <option value="Cachorro">Cachorro</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Pássaro">Pássaro</option>
+                                <option value="Peixe">Peixe</option>
+                                <option value="Outro">Outro</option>
+                            </select>
                         </div>
 
                         <div class="input-box">
@@ -28,17 +35,18 @@
                                 <option value="">Selecione</option>
                                 <option value="Macho">Macho</option>
                                 <option value="Fêmea">Fêmea</option>
+                                <option value="Outros">Outros</option>
                             </select>
                         </div>
 
                         <div class="input-box">
                             <label for="peso">Peso (kg)</label>
-                            <input type="number" step="0.01" name="peso" id="peso" placeholder="Peso do pet" required>
+                            <input type="number" step="1" name="peso" id="peso" placeholder="Peso do pet" required min="0">
                         </div>
 
                         <div class="input-box">
-                            <label for="peso">Idade (Meses)</label>
-                            <input type="number" step="0" name="idade" id="idade" placeholder="Idade do pet" required>
+                            <label for="idade">Data de Nascimento</label>
+                            <input type="date" name="idade" id="idade" required>
                         </div>
 
                         <div class="input-box">

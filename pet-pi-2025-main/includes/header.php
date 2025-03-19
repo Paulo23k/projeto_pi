@@ -1,3 +1,10 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -43,40 +50,48 @@
       </a>
 
       <div class="login">
-        <img class="perfil" src="assets/img/Header/person-fill.svg" alt="Ícone de Perfil" onclick="mostrarPopupPerfil(event)">
-        <button class="botao" onclick="irParaPagina('criar-conta.php')">Criar Perfil</button>
-        <button class="botao-secundario" onclick="irParaPagina('login.php')">Entrar</button>
+        <?php if (isset($_SESSION['usuario_logado'])): ?>
+          <!-- Se o usuário estiver logado -->
+          <img class="perfil" src="assets/img/Header/person-fill.svg" alt="Ícone de Perfil" onclick="mostrarPopupPerfil(event)">
+          <span>Bem-vindo, <?php echo $_SESSION['usuario_logado']; ?>!</span>
+          <button class="botao" onclick="window.location.href='perfil.php'">Meu Perfil</button>
+          <button class="botao-secundario" onclick="window.location.href='logout.php'">Sair</button>
+        <?php else: ?>
+          <!-- Se o usuário não estiver logado -->
+          <img class="perfil" src="assets/img/Header/person-fill.svg" alt="Ícone de Perfil" onclick="mostrarPopupPerfil(event)">
+          <button class="botao" onclick="window.location.href='criar-conta.php'">Criar Perfil</button>
+          <button class="botao-secundario" onclick="window.location.href='login.php'">Entrar</button>
+        <?php endif; ?>
       </div>
-    </div>
 
-    <div id="popup-carrinho" class="popup">
-      <div class="popup-content">
-        <div id="carrinho-vazio">
-          <p>Seu carrinho de compras está vazio.</p>
-          <button class="btn-pop" onclick="window.location.href='carrinho.php'">Ver Carrinho</button>
-        </div>
-        <div id="carrinho-com-itens" style="display: none;">
-          <h3>Itens no Carrinho:</h3>
-          <div id="itens-carrinho">
-            <!-- Os itens do carrinho serão listados aqui -->
+      <div id="popup-carrinho" class="popup">
+        <div class="popup-content">
+          <div id="carrinho-vazio">
+            <p>Seu carrinho de compras está vazio.</p>
+            <button class="btn-pop" onclick="window.location.href='carrinho.php'">Ver Carrinho</button>
           </div>
-          <button class="btn-pop" onclick="window.location.href='carrinho.php'">Ver Carrinho</button>
+          <div id="carrinho-com-itens" style="display: none;">
+            <h3>Itens no Carrinho:</h3>
+            <div id="itens-carrinho">
+              <!-- Os itens do carrinho serão listados aqui -->
+            </div>
+            <button class="btn-pop" onclick="window.location.href='carrinho.php'">Ver Carrinho</button>
+          </div>
+          <button class="btn-pop" onclick="fecharPopupCarrinho()">Fechar</button>
         </div>
-        <button class="btn-pop" onclick="fecharPopupCarrinho()">Fechar</button>
       </div>
-    </div>
 
-
-    <!-- Popup do perfil -->
-    <div id="popup-perfil" class="popup">
-      <div class="popup-content">
-        <p>Faça login ou crie um perfil para acessar seu perfil.</p>
-        <button class="btn-pop" onclick="window.location.href='login.php'">Entrar</button>
-        <button class="btn-pop" onclick="window.location.href='criar-conta.php'">Criar Perfil</button>
-        <button class="btn-pop" onclick="fecharPopupPerfil()">Fechar</button>
+      <!-- Popup do perfil -->
+      <div id="popup-perfil" class="popup">
+        <div class="popup-content">
+          <p>Faça login ou crie um perfil para acessar seu perfil.</p>
+          <button class="btn-pop" onclick="window.location.href='login.php'">Entrar</button>
+          <button class="btn-pop" onclick="window.location.href='criar-conta.php'">Criar Perfil</button>
+          <button class="btn-pop" onclick="fecharPopupPerfil()">Fechar</button>
+        </div>
       </div>
-    </div>
   </header>
+
   <nav>
     <ul class="menu">
       <li>
