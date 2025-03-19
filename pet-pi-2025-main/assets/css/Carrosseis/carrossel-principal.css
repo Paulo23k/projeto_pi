@@ -25,7 +25,7 @@
 }
 
 .carrossel img {
-  width: 65%; /* Tamanho da imagem principal */
+  width: 64%;
   object-fit: cover;
   transition: transform 0.5s, opacity 0.5s; /* Animações suaves */
   opacity: 1; /* Imagem atual visível */
@@ -104,7 +104,7 @@
 
 @media (max-width: 768px) {
   .carrossel img {
-    width: 90%; /* Aumenta ainda mais o tamanho da imagem principal */
+    width: 80%; /* Aumenta ainda mais o tamanho da imagem principal */
   }
 
   .container-carrossel button {
@@ -119,7 +119,7 @@
 
 @media (max-width: 480px) {
   .carrossel img {
-    width: 100%; /* A imagem ocupa toda a largura em telas muito pequenas */
+    width: 90%; /* A imagem ocupa toda a largura em telas muito pequenas */
   }
 
   .container-carrossel button {
