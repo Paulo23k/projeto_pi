@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Sans", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: #6DD0FF;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.container {
+    width: 85%;
+    height: 85%;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.form-image {
+    width: 50%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center; 
+    border: none;
+}
+.form-image img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* Formulário na outra metade */
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 3rem;
+    border-radius: 5px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-box label {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.input-box input {
+    margin-bottom: 0.3rem; /* Pequeno espaço entre input e erro */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    height: 0; /* Mantém um espaço fixo para evitar empurrar */
+    visibility: hidden;
+    right: 0; /* Alinha à direita */
+    text-align: right;
+}
+
+.input-box input.error {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 1);
+}
+
+.input-box input.valid {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+
+/* Aparece o erro sem afetar o layout */
+.input-box input.error + .error-message {
+    visibility: visible;
+}
+
+
+.input-box input.error + .error-message {
+    visibility: visible; /* Mostra quando há erro */
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 150px; /* Evita que o input fique muito pequeno */
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.input-box input {
+    margin: 3px 3px;
+    padding: 6px 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px #0000004c;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #6DD0FF;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 40px; /* Espaço para o botão */
+}
+
+.password-container button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.continue-button button {
+    width: 100%;
+    margin-top: 0.4rem;
+    border: none;
+    background-color: #6DD0FF;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #1b9ddb;
+    color: #f9f9f9;
+    
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 2px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+.login-social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-social p {
+    margin-bottom: 10px;
+}
+
+.login-social a {
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.login-social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.login-social a:hover img {
+    transform: scale(1.1);
+}
+
+.erro {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.mensagem {
+    color: green;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Alinha o título e a seção de login na mesma linha */
+.form-header .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo para a seção de login (texto + botão) */
+.login-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Distância entre o texto e o botão */
+}
+
+.login-section span {
+    font-size: 14px;
+    color: #555;
+}
+
+.login-button {
+    padding: 8px 16px;
+    background-color: #6DD0FF;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-button:hover {
+    background-color: #1b9ddb;
+    color: #f9f9f9;
+}
+
+footer {
+    background-color: #6DD0FF;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 1330px) {
+    .container {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos */
+        width: 100%;
+        height: 100vh; /* Ajusta a altura conforme necessário */
+        box-shadow: none;
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .form-image {
+        display: none; /* Remove a imagem */
+    }
+
+    .form {
+        width: 100%;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        height: 100vh; /* Ocupa toda a tela */
+    }
+
+    .form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .continue-button button {
+        padding: 0.8rem;
+    }
+
+    .login-social a img {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .jatemconta {
+        visibility: hidden;
+        font-size: 12px;
+    }
+
+    .button-back {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+}

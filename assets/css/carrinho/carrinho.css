@@ -1,0 +1,190 @@
+/* Estilos Gerais */
+body {
+    font-family: "Inria Sans", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #6DD0FF;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-top: auto;
+    width: 100%;
+}
+
+a {
+    color: #6DD0FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos do Carrinho */
+.produtos-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.produto-carrinho {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.produto-carrinho-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.produto-carrinho-info {
+    flex-grow: 1;
+}
+
+.produto-carrinho-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.produto-carrinho-info button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.produto-carrinho-info button:hover {
+    background-color: #c82333;
+}
+
+.total-carrinho {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.total-carrinho h3 {
+    font-size: 1.5rem;
+    color: #6DD0FF;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6DD0FF;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1b9ddb;
+    color: #fff;
+}
+
+/* Mensagem de Carrinho Vazio */
+.carrinho-vazio {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.carrinho-vazio p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.carrinho-vazio a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6DD0FF;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.carrinho-vazio a:hover {
+    background-color: #1b9ddb;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .produto-carrinho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto-carrinho-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .produto-carrinho-info button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .total-carrinho {
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

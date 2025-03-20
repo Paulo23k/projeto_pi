@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Sans", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f1f1f1;
+    padding-top: 20px;
+}
+
+main {
+    width: 80%;
+    max-width: 1200px;
+    padding: 3rem;
+    background-color: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;  /* Garante que o título será em negrito */
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Estilos para os links que se comportam como botões */
+.button-container {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os botões */
+    margin-left: auto; /* Alinha os botões à direita */
+}
+
+.button {
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center; /* Centraliza o texto */
+    cursor: pointer; /* Cursor de mãozinha */
+}
+
+
+/* Estilo específico para o link de Logout */
+.button.logout {
+    background-color: #dc3545; /* Cor vermelha para o botão de logout */
+}
+
+/* Efeito de hover no link de Logout */
+.button.logout:hover {
+    background-color: #c82333; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Efeito de "elevar" o botão */
+}
+
+
+
+.pets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pet-card {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pet-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.pet-card p {
+    margin-bottom: 0.5rem;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.no-pets {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.register-pet-button {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #6DD0FF;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-pet-button:hover {
+    background-color: #1b9ddb;
+}
+
+@media (max-width: 900px) {
+    main {
+        width: 95%;
+        padding: 2rem;
+    }
+
+    .pets-container {
+        justify-content: center;
+    }
+
+    .pet-card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pets-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pet-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
