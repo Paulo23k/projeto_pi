@@ -44,7 +44,8 @@ unset($_SESSION['erro_login']); // Remove o erro após exibição
         <div class="input-group">
           <div class="input-box">
             <label for="email">Email ou CPF</label>
-            <input type="text" name="email" id="email" placeholder="Digite seu email ou cpf" required>
+            <input type="text" name="email" id="email" placeholder="Digite seu email ou CPF" required>
+            <div id="email-error" class="error-message"></div> 
           </div>
 
           <div class="input-box">
@@ -52,6 +53,7 @@ unset($_SESSION['erro_login']); // Remove o erro após exibição
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
           </div>
         </div>
+
         <div class="continue-button">
           <button type="submit" id="btnlogin">Entrar</button>
         </div>

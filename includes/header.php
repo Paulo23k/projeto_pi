@@ -45,7 +45,7 @@ if (session_status() == PHP_SESSION_NONE) {
       </div>
     </div>
     <div class="cart">
-      <a href="carrinho.php" class="carrinho-link" onclick="mostrarPopupCarrinho(event)">
+      <a href="carrinho.php" class="carrinho-link" onclick="mostrarPopupCarrinho(event)" style="filter: brightness(0) saturate(100%) invert(1);">
         <img class="cart-icon" src="assets/img/Header/cart4.svg" alt="Ícone de Carrinho">
       </a>
 

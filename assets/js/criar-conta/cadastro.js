@@ -229,6 +229,41 @@ function validarEmail() {
 }
 
 //VALIDAÇÃO SENHA
+// document.getElementById("senha").addEventListener("blur", function () {
+//     validarSenha();
+// });
+
+// document.getElementById("senha").addEventListener("input", function () {
+//     validarSenha();
+// });
+
+// function validarSenha() {
+//     let senhaInput = document.getElementById("senha");
+//     let senhaError = document.getElementById("senha-error");
+//     let senha = senhaInput.value.trim();
+
+//     if (senha === "") {
+//         senhaError.textContent = "O campo de senha é obrigatório.";
+//         senhaInput.classList.add("error");
+//         senhaInput.classList.remove("valid");
+//     }
+//     else if (senha.length < 12) {
+//         senhaError.textContent = "A senha deve ter pelo menos 12 caracteres.";
+//         senhaInput.classList.add("error");
+//         senhaInput.classList.remove("valid");
+//     }
+//     else if (!/[!@#$%^&*(),.?":{}|<>]/.test(senha)) {
+//         senhaError.textContent = "A senha deve conter pelo menos 1 caractere especial.";
+//         senhaInput.classList.add("error");
+//         senhaInput.classList.remove("valid");
+//     } else {
+//         senhaError.textContent = "";
+//         senhaInput.classList.remove("error");
+//         senhaInput.classList.add("valid");
+//     }
+// }
+
+// VALIDAÇÃO SENHA
 document.getElementById("senha").addEventListener("blur", function () {
     validarSenha();
 });
@@ -237,6 +272,15 @@ document.getElementById("senha").addEventListener("input", function () {
     validarSenha();
 });
 
+document.getElementById("confirma_senha").addEventListener("blur", function () {
+    validarConfirmaSenha();
+});
+
+document.getElementById("confirma_senha").addEventListener("input", function () {
+    validarConfirmaSenha();
+});
+
+// Função para validar a senha
 function validarSenha() {
     let senhaInput = document.getElementById("senha");
     let senhaError = document.getElementById("senha-error");
@@ -262,6 +306,31 @@ function validarSenha() {
         senhaInput.classList.add("valid");
     }
 }
+
+// Função para validar a confirmação da senha
+function validarConfirmaSenha() {
+    let senhaInput = document.getElementById("senha");
+    let confirmaSenhaInput = document.getElementById("confirma_senha");
+    let confirmaSenhaError = document.getElementById("confirma_senha-error");
+    let senha = senhaInput.value.trim();
+    let confirmaSenha = confirmaSenhaInput.value.trim();
+
+    if (confirmaSenha === "") {
+        confirmaSenhaError.textContent = "O campo de confirmação de senha é obrigatório.";
+        confirmaSenhaInput.classList.add("error");
+        confirmaSenhaInput.classList.remove("valid");
+    }
+    else if (confirmaSenha !== senha) {
+        confirmaSenhaError.textContent = "As senhas não coincidem.";
+        confirmaSenhaInput.classList.add("error");
+        confirmaSenhaInput.classList.remove("valid");
+    } else {
+        confirmaSenhaError.textContent = "";
+        confirmaSenhaInput.classList.remove("error");
+        confirmaSenhaInput.classList.add("valid");
+    }
+}
+
 
 // Validação do CEP
 document.getElementById("cep").addEventListener("input", function () {

@@ -11,7 +11,7 @@
             </button>
         </div> -->
         <div class="form">
-        <form method="POST" action="processa_cadastro.php" id="formCadastro">
+            <form method="POST" action="processa_cadastro.php" id="formCadastro">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastro Pessoal</h1>
@@ -56,6 +56,13 @@
                         <label for="senha">Senha</label>
                         <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
                         <span class="error-message" id="senha-error"></span>
+                    </div>
+
+                    <!-- Campo para confirmar a senha -->
+                    <div class="input-box">
+                        <label for="confirma_senha">Confirmar Senha</label>
+                        <input type="password" name="confirma_senha" id="confirma_senha" placeholder="Confirme sua senha" required>
+                        <span class="error-message" id="confirma_senha-error"></span>
                     </div>
 
                     <div class="input-box">

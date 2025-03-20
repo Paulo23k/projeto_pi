@@ -93,6 +93,25 @@ body {
     box-shadow: 2px 2px 8px #0000004c;
 }
 
+.error-message {
+    color: red;
+    font-size: 12px;
+    height: 0; /* Mantém um espaço fixo para evitar empurrar */
+    visibility: hidden; /* Inicialmente invisível */
+    right: 0; /* Alinha à direita */
+}
+
+.input-box input.error {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 1);
+}
+
+
+/* Aparece o erro sem afetar o layout */
+.input-box input.error + .error-message {
+    visibility: visible; /* Torna visível quando há erro */
+    height: none; /* Ajusta a altura da mensagem de erro */
+}
 
 
 .input-box input {

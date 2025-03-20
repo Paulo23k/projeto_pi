@@ -40,6 +40,18 @@ include 'includes/header.php';
       </div>
     </section>
 
+    <script>
+    // Função para mostrar o popup
+    function mostrarPopup() {
+      document.getElementById("popup").style.display = "flex"; // Exibe o popup
+    }
+
+    // Função para fechar o popup
+    function fecharPopup() {
+      document.getElementById("popup").style.display = "none"; // Esconde o popup
+    }
+  </script>
+
   </section>
   <section>
     <h1 class="h1-destaque-dog">Destaques para Cachorros</h1>
